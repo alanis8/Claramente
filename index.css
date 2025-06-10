@@ -29,24 +29,31 @@ header {
     background-color: #B8DBF3;
     font-family: Georgia, 'Times New Roman', Times, serif;
     z-index: 1000;
+
+    /* Flexbox layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 .header-container {
     position: relative;
-    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .logo {
     height: 120px;
-    position: absolute;
-    left: 40px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 .header-content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #title {
     font-size: 35px;
@@ -62,6 +69,8 @@ header {
     justify-content: center;
     gap: 70px;
     margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
 }
 #inicio, #aprende, #herramientas, #ayuda, #contactanos {
   scroll-margin-top: 200px;
@@ -215,10 +224,10 @@ button {
   }
   header {
     height: 120px;
+    padding: 0 20px;
   }
   .logo {
     height: 80px;
-    left: 20px;
   }
   #title {
     font-size: 24px;
@@ -230,6 +239,7 @@ button {
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
   }
   #inicio, #aprende, #herramientas, #ayuda, #contactanos {
     font-size: 20px;
